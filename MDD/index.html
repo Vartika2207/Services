@@ -1,0 +1,534 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        :root {
+        --black: #000;
+        --green: #8BD0B4;
+        }
+
+        html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        background-color: #fff;
+        font-size: 62.5%;
+        }
+        
+
+        *{
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all 0.2s linear;
+        }
+        /*header and logo*/
+        header{
+            top: 0; right: 0; left: 0;
+            background: #000;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+        }
+        header .logo{
+            height: 8rem;
+            width: 8rem;
+        }
+
+        /*home*/
+        .home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        position: relative;
+        top: 0;
+        }
+        .content{
+            text-align: center;
+        }
+        .content h3{
+            font-size: 50px; 
+            color: #fff; 
+            text-transform: uppercase;
+            text-shadow: 3 .3rem .5rem rgba(0,0,0,.1);
+        }
+        .content p{
+            font-size: 43px; 
+            color: #fff; 
+            text-transform: uppercase;
+            text-shadow: 3 .3rem .5rem rgba(0,0,0,.1);
+        }
+        .home .image-container img {
+        position: absolute;
+        top: .1%;
+        left: 0;
+        z-index: -1;
+        height: 80%;
+        width: 100%;
+        object-fit: cover;
+        }
+
+        /* heading deco*/
+        .heading {
+        text-align: center;
+        padding: 2.5rem 0;
+        }
+
+        .heading span {
+        font-size: 3.6rem;
+        background: var(--green);
+        color: #345045;
+        border-radius: 0.5rem;
+        padding: 0.2rem 1rem;
+        display: inline-block;
+        }
+        .heading span:hover {
+        font-size: 3.9rem;
+        background: #8BD0B4;
+        color: #ffff;
+        }
+
+        /*services box container*/
+        .services{
+            margin-top: -9rem;
+        }
+
+        .services .box-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10rem;
+            padding-bottom: 2rem;
+        }
+        .services .box-container .box{
+            flex: 1 1 30rem;
+            overflow: hidden;
+            border-radius: 0.6rem;
+            box-shadow: 0 1rem 2rem;
+            margin: 6px;
+        }
+        .services .box-container .box:hover{
+           background-image: radial-gradient(#9fe7ca, rgb(97, 96, 96));
+           color:#fff
+        }
+        .services .box-container .box img{
+            height:55%;
+            width: 88%;
+            top: 0px;
+            object-fit: cover;
+            align-self: center;
+        }
+        .services .box-container .box .content{
+            padding: 2rem;
+            color: #333;
+        }
+         
+        .services .box-container .box .content p{
+            font-size: 2rem;
+            font-family: cursive;
+            color: rgb(27, 26, 26);
+            padding: 1rem 0;
+        }
+        .services .box-container .box .content a{
+            display: block;
+            font-size: 1.3rem;
+            padding: .6rem 0;
+            color: #229768;
+        }
+        .services .box-container .box .content a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /*knnowMore*/
+        .control .knowMore{
+            border-radius: 3rem;
+            margin: auto;
+            padding: 1rem;
+            background: #000;
+            width: 16rem;
+            height: 5.3rem;
+            align-items: center;
+
+
+        }
+        .control .knowMore h2{
+            text-align: center;
+            font-style: oblique;
+            font-size: 18px; 
+            color: #fff; 
+            text-transform: none;
+            text-shadow: 3 .3rem .5rem rgba(0,0,0,.1);
+        }
+        .control .knowMore:hover{
+           background-image: radial-gradient(#9fe7ca, rgb(97, 96, 96));
+           color:#000;
+           width:17rem;
+           height: 5.6rem;
+           cursor: pointer;
+        } 
+
+        /*helper Note*/
+        .helpNote{
+            overflow:hidden;
+            background-image: url(img1.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            margin-top: 10px;
+            width: 100%;
+            margin-top: 3rem;
+            position: relative;
+        }
+        
+        .helpNote::before {
+            position: absolute;
+            content: '';
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(40, 77, 69, 0.5);
+
+            }
+
+        .helpNote .info{
+            color: #fff;
+            width: 100%;
+            position: relative;
+            height: 26rem;
+            border-radius: 0.6rem;
+            margin: auto;
+         }
+         .helpNote .button{
+             position: relative;
+             text-align: center;
+             /* margin: auto; */
+         }
+         .headNote .button p{
+             margin: auto;
+         }
+         .helpNote .button:hover{
+             width: 4rem;
+             height: 26rem;
+         }
+        .helpNote .info p{
+            font-size: 6rem;
+            margin-left: 3rem;
+            margin-top: 4rem;
+        }
+        .helpNote .button{
+            color: #fff;
+            /* text-align: center;
+            vertical-align: center; */
+            width: 15rem;
+            height: 6rem;
+            margin-left: 3rem;
+            margin-bottom: 4rem;
+            border-radius: 5.5rem;
+            border-style: groove;
+        }
+        .helpNote .button p{
+            font-size: 3rem;
+            padding: 1rem;
+            /* vertical-align: center;  */
+            text-align: center;
+        }
+        .helpNote .button:hover{
+            width: 16.2rem;
+            height: 7rem;
+            background: cornsilk;
+            color: #000;
+        } 
+        .helpNote .button p:hover{
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        /*footer*/
+        .footer{
+            width: 100%;
+            height: 15%;
+            margin-top: .2rem;
+            background: #000;
+        }
+        .footer .box-container{
+            
+            width: 100%;
+            display: flex;
+            flex: 1 1 24rem;
+            gap: 1.4rem;
+        }
+        .footer .box-container .box{
+            padding: 1rem 0;
+            flex-wrap: wrap;
+            
+            
+        }
+        .footer .box-container .box h3{
+            font-size: 2.5rem;
+            padding: 0.7rem 0;
+            color: #000;
+        }  
+        .footer .box-container .box p {
+        font-size: 1.5rem;
+        padding: 0.7rem 0;
+        color: #000;
+        }
+
+        .footer .box-container .box a {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: 0.7rem 0;
+        color: #eee;
+        gap: 2rem;
+        margin: 1.4rem;
+        }
+
+        .footer .box-container .box a:hover {
+        color: var(--purple);
+        text-decoration: underline;
+        }
+
+       /*media queries*/
+       @media(max-width:1200px){
+          html{
+              font-size: 55%;
+          }
+       }
+       @media(max-width:991px){
+          section{
+              padding: 5rem;
+          }
+       }
+       @media(max-width:768px){
+          html{
+              font-size: 55%;
+          }
+          .helpNote .info{
+                width:inherit;
+            }
+           .services{
+               margin-top:-120px ;
+           } 
+       }
+       @media (max-width: 450px) {
+            .heading span {
+                font-size: 2rem;
+            }
+            .helpNote .info{
+                width:inherit;
+            }
+       }
+       @media (max-width: 350px) {
+            .heading span {
+                font-size: 1.3rem;
+            }
+       }
+
+   </style>
+   <!--font styles-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <!--Header and logo-->
+    <header>
+        <a href="https://digitalhain.com/" target="_blank"><img class="logo" src="logo.png" alt=""></a>
+    </header>
+
+    <!--Home section-->
+     <section class="home" >
+          <div class="content" >
+              <h3>Services</h3>
+              <p>Place which you can trust</p>
+
+          </div>
+          <div class="image-container">
+            <img src="services.jpg" alt="">
+
+          </div>
+     </section>
+
+     <!--services-->
+     <section class="services">
+        <h1 class="heading">
+            <span>s</span>
+            <span>e</span>
+            <span>r</span>
+            <span>v</span>
+            <span>i</span>
+            <span>c</span>
+            <span>e</span>
+            <span>s</span>
+        </h1>
+
+        <div class="box-container">
+            
+            <div class="box">
+                <img src="webD.png" alt="">
+                <div class="content">
+                    <p>Build Website</p>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="#">E-Commernce</a>
+                            <a href="#">WordPress</a>
+                            <a href="#">Dynamic</a>
+                            <a href="#">Static</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="build_business.png" alt="">
+                <div class="content">
+                    <p>Build Business</p>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="#">Business Development</a>
+                            <a href="#">Business Analysis</a>
+                            <a href="#">Business Consult</a>
+                
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="fix.png" alt="">
+                <div class="content">
+                    <p>Android Apps</p>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="#">Android Apps</a>
+                            <a href="#">Web View</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="networking.png" alt="">
+                <div class="content">
+                    <p>Networking</p>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="#">Hosting</a>
+                            <a href="#">H-Panel</a>
+                            <a href="#">Sub-Domain*</a>
+                            <a href="#">Domain*</a>
+                            <a href="#">SSL</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="freeService.png" alt="">
+                <div class="content">
+                    <p>Free Services</p>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="#">Templates</a>
+                            <a href="#">Themes</a>
+                            <a href="#">Photos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="hero-img.png" alt="">
+                <div class="content">
+                    <p>Training</p>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <a href="#">Business Development</a>
+                            <a href="#">Android Development</a>
+                            <a href="#">Web Development</a>
+                            <a href="#">Data Structures</a>
+                            <a href="#">Webinars</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+     </section>
+
+     <section class="control">
+         <div class="knowMore"><h2>KNOW MORE</h2></div>
+     </section>
+     
+     <!--customer info-->
+     <section class="helpNote">
+         <div class="info">
+           <p class="note">Get in touch with us</p>  
+         </div>
+         <div class="button">
+             <p>Call Us</p>
+         </div>
+
+     </section>
+
+
+
+     <!--contact --> 
+<!--      
+   <section class="contact" id="contact">
+        <h1 class="heading">
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+        </h1>
+
+        <div class="row">
+             <div class="image">
+                <img src="free_services.png" alt="">
+            </div> 
+            <form action="" method="">
+                <div class="inputBox">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Number">
+                    <input type="text" placeholder="Enter subject..">
+                </div>
+                <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" class="btn" value="send message">
+            </form>
+        </div>
+   </section> -->
+
+   <!--footer-->
+   <section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <!-- <h3>Follow Us</h3> -->
+            <a href="#home">Facebook</a>
+            <a href="#gallery">LinkedIn</a>
+            <a href="#contact">Youtube</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
